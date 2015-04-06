@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.newboston.bluetoothtesting.DashboardHome">
+
+
+    <ImageButton
+        android:src="@drawable/linechart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonLineChart"
+        android:minWidth="75dip"
+        android:minHeight="75dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="88dp"
+        android:onClick="viewLineChart"
+        />
+
+    <ImageButton
+        android:src="@drawable/scatterplot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonPointChart"
+        android:layout_alignBottom="@+id/imageButtonLineChart"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_alignTop="@+id/imageButtonLineChart"
+        android:minHeight="75dip"
+        android:minWidth="75dip"
+        android:onClick="viewPointChart"
+        />
+
+    <ImageButton
+        android:src="@drawable/barchart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonBarChart"
+        android:minWidth="75dip"
+        android:minHeight="75dip"
+        android:onClick="viewBarChart"
+        android:layout_below="@+id/textView3"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bar Chart"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/imageButtonBarChart"
+        android:layout_alignStart="@+id/imageButtonBarChart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Line Chart"
+        android:id="@+id/textView"
+        android:layout_above="@+id/imageButtonPointChart"
+        android:layout_alignRight="@+id/imageButtonLineChart"
+        android:layout_alignEnd="@+id/imageButtonLineChart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Point Chart"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignRight="@+id/imageButtonPointChart"
+        android:layout_alignEnd="@+id/imageButtonPointChart" />
+
+</RelativeLayout>

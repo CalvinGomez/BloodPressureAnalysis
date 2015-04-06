@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.newboston.bluetoothtesting" >
+
+    <uses-sdk tools:overrideLibrary="com.jjoe64.graphview" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Dashboard"
+            android:label="@string/title_activity_dashboard" >
+        </activity>
+        <activity
+            android:name=".DashboardHome"
+            android:label="@string/title_activity_dashboard_home" >
+        </activity>
+        <activity
+            android:name=".LineChartActivity"
+            android:label="@string/title_activity_line_chart"
+            android:parentActivityName=".DashboardHome" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.newboston.bluetoothtesting.DashboardHome" />
+        </activity>
+        <activity
+            android:name=".PointChartActivity"
+            android:label="@string/title_activity_point_chart"
+            android:parentActivityName=".DashboardHome" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.newboston.bluetoothtesting.DashboardHome" />
+        </activity>
+    </application>
+
+</manifest>
